@@ -10,9 +10,29 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".Progreso"
+            android:label="@string/title_activity_progreso"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".InformacionEjercicio"
+            android:label="@string/title_activity_informacion_ejercicio"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SeleccionEjercicio"
+            android:label="@string/title_activity_seleccion_ejercicio"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Bienvenida"
+            android:label="@string/title_activity_bienvenida"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Ayuda"
+            android:label="@string/title_activity_ayuda"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name=".ArmarRutina"
             android:label="@string/title_activity_armar_rutina"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"

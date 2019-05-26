@@ -15,4 +15,19 @@
     <string name="menu_send">Send</string>
     <string name="title_activity_armar_rutina">ArmarRutina</string>
     <string name="agregar_ejericio">Agregar Ejericio</string>
+    <string name="title_activity_ayuda">Ayuda</string>
+    <string name="title_activity_bienvenida">Bienvenida</string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="title_activity_inicio_sesion">Sign in</string>
+    <string name="title_activity_seleccion_ejercicio">SeleccionEjercicio</string>
+    <string name="title_activity_informacion_ejercicio">InformacionEjercicio</string>
+    <string name="title_activity_progreso">Progreso</string>
 </resources>
