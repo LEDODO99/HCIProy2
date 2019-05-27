@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ArmarRutina"
+    tools:showIn="@layout/activity_armar_rutina2">
+
+    <TextView
+        android:id="@+id/titulo_armar_rutina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Armar Rutina"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/categoria_ejercicio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titulo_armar_rutina"
+        android:layout_alignParentLeft="true"
+        android:text="Categoria"
+        android:textSize="25sp" />
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner_Categoria"
+        android:layout_below="@id/titulo_armar_rutina"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@id/categoria_ejercicio"
+        android:layout_alignBottom="@id/categoria_ejercicio"></Spinner>
+
+    <TextView
+        android:id="@+id/txt_tag_ejericio_armar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/categoria_ejercicio"
+        android:layout_alignRight="@id/categoria_ejercicio"
+        android:layout_alignParentLeft="true"
+        android:text="Ejercicio"
+        android:textSize="25sp" />
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner_ejercicio"
+        android:layout_below="@id/categoria_ejercicio"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@id/txt_tag_ejericio_armar"
+        android:layout_alignBottom="@id/txt_tag_ejericio_armar"></Spinner>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_medicion_agregar_ejercicio"
+        android:text="Medicion"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/txt_tag_ejericio_armar"
+        android:textSize="25sp"
+        android:layout_alignRight="@+id/categoria_ejercicio"/>
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner_cantidad"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/txt_tag_ejericio_armar"
+        android:layout_toRightOf="@id/txt_medicion_agregar_ejercicio"
+        android:layout_alignBottom="@id/txt_medicion_agregar_ejercicio"></Spinner>
+    <Button
+        android:id="@+id/btn_agregar_ejercicio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_medicion_agregar_ejercicio"
+        android:layout_centerHorizontal="true"
+        android:text="Agregar Ejercicio"
+        android:textSize="24sp" />
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/list_view_rutina_ejercicios"
+        android:layout_below="@id/btn_agregar_ejercicio"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        ></ListView>
+
+</RelativeLayout>

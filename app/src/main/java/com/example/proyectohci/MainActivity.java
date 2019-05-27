@@ -25,7 +25,6 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private static final int REQ_CODE_SPEECH_INPUT = 100;
-    private String mVoiceInputTv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
