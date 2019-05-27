@@ -29,11 +29,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/txt_ejercicios"
-                android:layout_marginTop="25dp"
-                android:fontFamily="serif"
                 android:layout_gravity="center_horizontal"
+                android:layout_marginTop="25dp"
+                android:background="#00BCD4"
+                android:fontFamily="serif"
                 android:text="Armar Rutina"
-                android:textColor="#13120F" />
+                android:textColor="#F8F8F8"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
