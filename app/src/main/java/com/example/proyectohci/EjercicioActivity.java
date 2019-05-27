@@ -15,6 +15,11 @@ public class EjercicioActivity extends AppCompatActivity implements SensorEventL
     private SensorManager mSensorManager;
     private Sensor mAccelerometer;
     private Sensor mGyroscope;
+    private boolean workoutSet = false;
+
+    private float previousX = 0;
+    private float previousY = 0;
+    private float previousZ = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +45,20 @@ public class EjercicioActivity extends AppCompatActivity implements SensorEventL
     public void onSensorChanged(SensorEvent sensorEvent) {
         String sensorName = sensorEvent.sensor.getName();
         Log.wtf("Sensor",sensorName + ": X: " + sensorEvent.values[0] + "; Y: " + sensorEvent.values[1] + "; Z: " + sensorEvent.values[2] + ";");
+        if(!workoutSet){
+            if(sensorEvent.values[0] > previousX + 0.5f || sensorEvent.values[0] < previousX - 0.5f){
+                Log.wtf("SENSOR", "CAMBIO EN X");
+                previousX = sensorEvent.values[0];
+            }
+            if(sensorEvent.values[1] > previousY + 0.5f || sensorEvent.values[1] < previousY - 0.5f){
+                Log.wtf("SENSOR", "CAMBIO EN Y");
+                previousY = sensorEvent.values[1];
+            }
+            if(sensorEvent.values[2] > previousZ + 0.5f || sensorEvent.values[2] < previousZ - 0.5f){
+                Log.wtf("SENSOR", "CAMBIO EN Z");
+                previousZ = sensorEvent.values[2];
+            }
+        }
     }
 
     @Override
