@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/marcar_completado"
+        android:title="Completado"/>
+    <item android:id="@+id/elimina_de_rutina"
+        android:title="Eliminar"/>
+</menu>

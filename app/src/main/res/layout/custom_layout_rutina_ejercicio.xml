@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/custom_nombre_ejercicio"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="Text View"
+        android:textSize="30dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/custom_medidor_set"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/custom_nombre_ejercicio"
+        android:textSize="25dp"
+        android:text="Text VIew"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/custom_cantidad_set"
+        android:layout_toRightOf="@id/custom_medidor_set"
+        android:layout_alignTop="@+id/custom_medidor_set"
+        android:textSize="25dp"
+        android:text="Text VIew"/>
+
+    <ImageView
+        android:id="@+id/iv_estado"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:srcCompat="@mipmap/ic_launcher" />
+</RelativeLayout>
