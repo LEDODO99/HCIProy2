@@ -1,30 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:background="#A9FFC107">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="25dp"
-        android:layout_marginBottom="25dp"
         android:id="@+id/text_inicio"
-        android:text="Inicio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/text_inicio"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="25dp"
+        android:text="Bienvenido a la app que te ayudara a armar tus rutinas, ver tu progreso y ayudarte a llevar el conteo de tus repeticiones. "
         android:textAlignment="center"
         android:textSize="24sp"
         android:textStyle="bold" />
 
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_inicio"
+        android:layout_alignBottom="@+id/textView3"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="166dp"
+        android:layout_marginBottom="0dp"
+        android:text="Para empezar a usar la app, puede hacer uso de las opciones que estan en el menu al presionar en este boton."
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:ignore="NotSibling" />
+
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/text_inicio"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="25dp"
-        app:srcCompat="@drawable/ic_menu_ejercicios" />
+        android:layout_width="86dp"
+        android:layout_height="53dp"
+        android:layout_below="@+id/textView3"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="163dp"
+        android:layout_marginTop="9dp"
+        app:srcCompat="@drawable/ic_dehaze_black_24dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="144dp"
+        android:layout_below="@+id/imageView2"
+        android:layout_marginTop="14dp"
+        android:text="Para cambiar de pestaña puede hacerlo apresionando el boton indicado aca para hacer el cambio usando la voz. Solo debe decir: inicio, Ejecicios, progresos o ayuda"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="match_parent"
+        android:layout_height="137dp"
+        android:layout_below="@+id/text_inicio"
+        android:layout_alignStart="@+id/imageView5"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="2dp"
+        app:srcCompat="@drawable/deporte"
+        tools:ignore="NotSibling" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="106dp"
+        android:layout_height="63dp"
+        android:layout_below="@+id/textView4"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="151dp"
+        android:layout_marginTop="30dp"
+        app:srcCompat="@drawable/ic_arrow_forward_black_24dp" />
 
 </RelativeLayout>
