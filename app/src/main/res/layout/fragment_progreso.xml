@@ -32,6 +32,47 @@
                 android:layout_marginTop="25dp"
                 android:layout_gravity="center_horizontal" />
 
+            <EditText
+                android:id="@+id/et_peso"
+                android:layout_width="135dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_progreso"
+                android:layout_marginTop="25dp"
+                android:ems="10"
+                android:fontFamily="serif"
+                android:inputType="textPersonName"
+                android:text="Name" />
+
+            <EditText
+                android:id="@+id/et_medidaBrazos"
+                android:layout_width="135dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:fontFamily="serif"
+                android:inputType="textPersonName"
+                android:text="Name" />
+
+            <EditText
+                android:id="@+id/et_medidaPiernas"
+                android:layout_width="135dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:fontFamily="serif"
+                android:inputType="textPersonName"
+                android:text="Name" />
+
+            <EditText
+                android:id="@+id/et_medidaCintura"
+                android:layout_width="135dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:fontFamily="serif"
+                android:inputType="textPersonName"
+                android:text="Name" />
+
         </LinearLayout>
 
     </ScrollView>
