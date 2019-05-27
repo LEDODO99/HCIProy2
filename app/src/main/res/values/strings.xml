@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ProyectoHCI</string>
+    <string name="app_name">ShakeBuddy</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
@@ -13,7 +13,7 @@
     <string name="menu_ayuda">Ayuda</string>
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
-    <string name="title_activity_armar_rutina">ArmarRutina</string>
+    <string name="title_activity_armar_rutina">Armar rutina</string>
 
     <string-array name="time_exercises_routine">
         <item>Trote</item>
