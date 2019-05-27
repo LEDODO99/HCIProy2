@@ -34,44 +34,83 @@
 
             <EditText
                 android:id="@+id/et_peso"
-                android:layout_width="135dp"
+                android:layout_width="160dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/txt_progreso"
+                android:layout_marginLeft="10dp"
                 android:layout_marginTop="25dp"
                 android:ems="10"
                 android:fontFamily="serif"
                 android:inputType="textPersonName"
-                android:text="Name" />
-
-            <EditText
-                android:id="@+id/et_medidaBrazos"
-                android:layout_width="135dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:ems="10"
-                android:fontFamily="serif"
-                android:inputType="textPersonName"
-                android:text="Name" />
-
-            <EditText
-                android:id="@+id/et_medidaPiernas"
-                android:layout_width="135dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:ems="10"
-                android:fontFamily="serif"
-                android:inputType="textPersonName"
-                android:text="Name" />
+                android:text="Peso" />
 
             <EditText
                 android:id="@+id/et_medidaCintura"
-                android:layout_width="135dp"
+                android:layout_width="160dp"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:ems="10"
+                android:fontFamily="serif"
+                android:inputType="textPersonName"
+                android:text="Cintura" />
+
+            <EditText
+                android:id="@+id/et_medidaBrazoI"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:ems="10"
                 android:fontFamily="serif"
                 android:inputType="textPersonName"
-                android:text="Name" />
+                android:text="Brazo izquierdo" />
+
+            <EditText
+                android:id="@+id/et_medidaBrazoD"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:ems="10"
+                android:fontFamily="serif"
+                android:inputType="textPersonName"
+                android:text="Brazo derecho" />
+
+            <EditText
+                android:id="@+id/et_medidaPiernaI"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:ems="10"
+                android:fontFamily="serif"
+                android:inputType="textPersonName"
+                android:text="Pierna izquierda" />
+
+            <EditText
+                android:id="@+id/et_medidaPiernaD"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:ems="10"
+                android:fontFamily="serif"
+                android:inputType="textPersonName"
+                android:text="Pierna derecha" />
+
+            <Button
+                android:id="@+id/button_guardarprogreso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="25dp"
+                android:background="#00BCD4"
+                android:fontFamily="serif"
+                android:text="Guardar datos"
+                android:textColor="#F8F8F8"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"/>
 
         </LinearLayout>
 
