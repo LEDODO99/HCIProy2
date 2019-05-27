@@ -14,7 +14,7 @@ public class EjercicioActivity extends AppCompatActivity implements SensorEventL
 
     private SensorManager mSensorManager;
     private Sensor mAccelerometer;
-    private Sensor mGyroscope;
+    //private Sensor mGyroscope;
     private boolean workoutSet = false;
 
     private float previousX = 0;
@@ -27,13 +27,13 @@ public class EjercicioActivity extends AppCompatActivity implements SensorEventL
         setContentView(R.layout.activity_ejercicio);
         mSensorManager = (SensorManager)getSystemService(SENSOR_SERVICE);
         mAccelerometer = mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
-        mGyroscope = mSensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE);
+        //mGyroscope = mSensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE);
     }
 
     protected void onResume() {
         super.onResume();
         mSensorManager.registerListener(this, mAccelerometer, SensorManager.SENSOR_DELAY_NORMAL);
-        mSensorManager.registerListener(this, mGyroscope, SensorManager.SENSOR_DELAY_NORMAL);
+        //mSensorManager.registerListener(this, mGyroscope, SensorManager.SENSOR_DELAY_NORMAL);
     }
 
     protected void onPause() {
