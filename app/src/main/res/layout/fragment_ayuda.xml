@@ -3,10 +3,174 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ayuda"
-        android:layout_centerInParent="true"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_ayuda"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="165dp"
+                android:layout_marginTop="25dp"
+                android:fontFamily="serif"
+                android:text="Ayuda"
+                android:textColor="#FF5722"
+                android:textSize="30sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:id="@+id/txt_q1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_ayuda"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="50dp"
+                android:fontFamily="serif"
+                android:text="¿Cómo busco un ejercicio?"
+                android:textColor="#00BCD4"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_q1Answer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_q1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="serif"
+                android:text="- Ingresa a la sección de ejercicios\n- Te saldrán diversos ejercicios y deberás seleccionar uno\n- Dentro de cada uno, podrás ver información como nombre, categoría, instrucciones, repeticiones sugeridas, etc." />
+
+            <TextView
+                android:id="@+id/txt_q2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_q1Answer"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="serif"
+                android:text="¿Cómo puedo armar mi rutina?"
+                android:textColor="#00BCD4"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_q2Answer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_q2"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="serif"
+                android:text="- En la sección de ejercicios, aparecerá un botón que indica que puedes armar tu rutina.\n- Debes seleccionar la categoría, el nombre y los minutos del ejercicio.\n- Haz click en Agregar Ejercicio para seguir armando tu rutina." />
+
+            <TextView
+                android:id="@+id/txt_q3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_q2Answer"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="serif"
+                android:text="¿Cómo funciona la opción de Progreso?"
+                android:textColor="#00BCD4"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_q3Answer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_q3"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="serif"
+                android:text="Para obtener las gráficas/estadísticas de tu progreso, tomamos en cuenta qué ejercicios realizaste y la cantidad de cada uno. Además, analizamos también aspectos como: tiempo de inicio/final de la rutina, masa corporal, índice de grasa, etc." />
+
+            <TextView
+                android:id="@+id/txt_q4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_q3Answer"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="serif"
+                android:text="¿Cómo navegar dentro de la aplicación?"
+                android:textColor="#00BCD4"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_q4Answer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_q4"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="serif"
+                android:text="Si no puedes o quieres presionar los botones paa navegar en las opciones, puedes hacer click en el ícono de micrófono y decir la opción a la cual quieres ingresar. Automáticamente se te redigirá a esa opción." />
+
+            <TextView
+                android:id="@+id/txt_q5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_q4Answer"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="serif"
+                android:text="¿Cómo contar repeticiones?"
+                android:textColor="#00BCD4"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_q5Answer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_q5"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="serif"
+                android:text="- Selecciona tu ejercicio\n- Con el teléfono siempre en tu mano, realiza el movimiento del ejercicio. \n- Se te pedirá que lo hagas un par de veces para calibrar la aplicación.\n- Al terminar esta fase, ya inicia la verdadera rutina y podrás ver cuántas repeticiones vas haciendo." />
+
+            <TextView
+                android:id="@+id/txt_q6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_q5Answer"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="serif"
+                android:text="¿Puedo apoyarme únicamente en la aplicación?"
+                android:textColor="#00BCD4"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_q6Answer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_q6"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="serif"
+                android:text="Definitivamente no. Debes siempre buscar ayuda profesional para ver qué ejercicios se adecúan más a tu terapia y siempre ten en cuenta tus limitaciones físicas. Sabemos que puedes lograrlo, pero la ayuda no está de más."
+                android:layout_marginBottom="60dp" />
+        </LinearLayout>
+
+    </ScrollView>
 
 </RelativeLayout>
