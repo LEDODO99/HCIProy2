@@ -38,6 +38,8 @@ public class MainActivity extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
+
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new InicioFragment()).commit();
     }
 
     @Override
@@ -78,17 +80,13 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_home) {
-            // Handle the camera action
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new InicioFragment()).commit();
         } else if (id == R.id.nav_gallery) {
-
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new EjerciciosFragment()).commit();
         } else if (id == R.id.nav_slideshow) {
-
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ProgresoFragment()).commit();
         } else if (id == R.id.nav_tools) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new AyudaFragment()).commit();
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
