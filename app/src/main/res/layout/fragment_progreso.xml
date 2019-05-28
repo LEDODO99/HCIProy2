@@ -51,7 +51,8 @@
                 android:ems="10"
                 android:fontFamily="serif"
                 android:inputType="textPersonName"
-                android:text="Cintura" />
+                android:text=""
+                android:hint="Cintura"/>
 
             <EditText
                 android:id="@+id/et_medidaBrazoI"
@@ -61,7 +62,8 @@
                 android:ems="10"
                 android:fontFamily="serif"
                 android:inputType="textPersonName"
-                android:text="Brazo izquierdo" />
+                android:text=""
+                android:hint="Brazo izquierdo" />
 
             <EditText
                 android:id="@+id/et_medidaPiernaI"
@@ -71,7 +73,8 @@
                 android:ems="10"
                 android:fontFamily="serif"
                 android:inputType="textPersonName"
-                android:text="Pierna izquierda" />
+                android:text=""
+                android:hint="Pierna izquierda" />
 
         </LinearLayout>
 
@@ -91,7 +94,8 @@
                 android:ems="10"
                 android:fontFamily="serif"
                 android:inputType="textPersonName"
-                android:text="Peso" />
+                android:text=""
+                android:hint="Peso" />
             <EditText
                 android:id="@+id/et_medidaBrazoD"
                 android:layout_width="match_parent"
@@ -100,7 +104,8 @@
                 android:ems="10"
                 android:fontFamily="serif"
                 android:inputType="textPersonName"
-                android:text="Brazo derecho" />
+                android:text=""
+                android:hint="Brazo derecho" />
             <EditText
                 android:id="@+id/et_medidaPiernaD"
                 android:layout_width="match_parent"
@@ -109,7 +114,8 @@
                 android:ems="10"
                 android:fontFamily="serif"
                 android:inputType="textPersonName"
-                android:text="Pierna derecha" />
+                android:text=""
+                android:hint="Pierna derecha" />
 
         </LinearLayout>
 
