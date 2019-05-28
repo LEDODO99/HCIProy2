@@ -119,8 +119,10 @@ public class ArmarRutina extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String sp2= String.valueOf(s2.getSelectedItem());
                 if (Arrays.asList(getResources().getStringArray(R.array.time_exercises_routine)).contains(sp2)){
+                    textViewMedidores.setTextSize(25);
                     textViewMedidores.setText("Minutos");
                 }else{
+                    textViewMedidores.setTextSize(18);
                     textViewMedidores.setText("Repeticiones");
                 }
             }
@@ -209,7 +211,7 @@ public class ArmarRutina extends AppCompatActivity {
             else
                 imageView.setImageResource((R.drawable.green_check));
             textViewEjercicio.setText(nombreEjercicio.get(i));
-            textViewTipo.setText(tipoEjercicio.get(i));
+            textViewTipo.setText(tipoEjercicio.get(i)+": ");
             textCantidad.setText(numeroReps.get(i).toString());
             view.setLongClickable(true);
             return view;
