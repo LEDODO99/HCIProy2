@@ -86,9 +86,6 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
 
         return super.onOptionsItemSelected(item);
     }
@@ -152,6 +149,9 @@ public class MainActivity extends AppCompatActivity
             Intent myIntent = new Intent(this, EjercicioActivity.class);
             startActivity(myIntent);
         }
+
+
+
         Snackbar.make(getWindow().getDecorView().getRootView(), snackbarMessage, Snackbar.LENGTH_LONG).setAction("Action", null).show();
     }
 }

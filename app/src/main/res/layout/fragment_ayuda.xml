@@ -94,7 +94,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="10dp"
                 android:fontFamily="serif"
-                android:text="Para obtener las gráficas/estadísticas de tu progreso, tomamos en cuenta qué ejercicios realizaste y la cantidad de cada uno. Además, analizamos también aspectos como: tiempo de inicio/final de la rutina, masa corporal, índice de grasa, etc." />
+                android:text="Puedes guardar tus datos en esta sección. Selecciona el día en el cual guardarás la información e ingresa las medidas de los campos solicitados. Al presionar guardar, puedes volver a ese día y ver cuáles eran tus medidas." />
 
             <TextView
                 android:id="@+id/txt_q4"
@@ -142,7 +142,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="10dp"
                 android:fontFamily="serif"
-                android:text="- Selecciona tu ejercicio\n- Con el teléfono siempre en tu mano, realiza el movimiento del ejercicio. \n- Se te pedirá que lo hagas un par de veces para calibrar la aplicación.\n- Al terminar esta fase, ya inicia la verdadera rutina y podrás ver cuántas repeticiones vas haciendo." />
+                android:text="- Selecciona tu ejercicio\n- Con el teléfono siempre en tu mano, realiza el movimiento del ejercicio una vez para calibrar. \n- Espera un segundo, inicia la rutina con su movimiento y podrás ver cuántas repeticiones vas haciendo." />
 
             <TextView
                 android:id="@+id/txt_q6"
