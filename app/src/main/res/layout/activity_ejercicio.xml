@@ -17,12 +17,12 @@
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Presione la pantalla para calibrar"
+            android:text="Coloque el celular en la posición inicial y presione la pantalla para iniciar la calibración"
             android:layout_gravity="center_horizontal"
             android:textSize="32sp"
             android:textStyle="bold"
             android:fontFamily="serif"
-            android:textColor="#2C4F79"
+            android:textColor="#264469"
             android:layout_margin="20dp"
             android:textAlignment="center"/>
 

@@ -30,7 +30,7 @@
                 android:id="@+id/imageView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/inicio" />
+                app:srcCompat="@drawable/inicio" android:visibility="gone"/>
 
         </LinearLayout>
 
@@ -40,7 +40,7 @@
         android:id="@+id/imageView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/deporte" />
+        app:srcCompat="@drawable/deporte"/>
 
     <TextView
         android:id="@+id/textView5"

@@ -37,6 +37,8 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View view) {
                 startVoiceInput();
+                //Intent myIntent = new Intent(getApplicationContext(), EjercicioActivity.class);
+                //startActivity(myIntent);
             }
         });
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
@@ -144,9 +146,9 @@ public class MainActivity extends AppCompatActivity
         }else if(voiceCommand.toLowerCase().contains("ayuda")){
             snackbarMessage = "Redireccionando a Ayuda.";
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new AyudaFragment()).commit();
-        }else if(voiceCommand.toLowerCase().contains("Repeticiones")){
+        }else if(voiceCommand.toLowerCase().contains("repeticiones")){
             snackbarMessage = "Redireccionando a Repeticiones.";
-            Intent myIntent = new Intent(this, EjercicioActivity.class);
+            Intent myIntent = new Intent(getApplicationContext(), EjercicioActivity.class);
             startActivity(myIntent);
         }
 

@@ -1,5 +1,6 @@
 package com.example.proyectohci;
 
+import android.content.Intent;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -275,7 +276,7 @@ public class EjercicioActivity extends AppCompatActivity implements SensorEventL
                 mpPling.start();
                 repetitions++;
                 endWorkout1 = false;
-                txtStatus.setText("Repeticiones\n"+repetitions);
+                txtStatus.setText("Repeticiones\n"+repetitions+"\n\n(Presione para finalizar)");
                 currentWorkoutForcesX = new ArrayList<>(workoutForcesX);
                 currentWorkoutForcesY = new ArrayList<>(workoutForcesY);
                 currentWorkoutForcesZ = new ArrayList<>(workoutForcesZ);
@@ -302,10 +303,13 @@ public class EjercicioActivity extends AppCompatActivity implements SensorEventL
                     mpWump.release();
                     mpWump = MediaPlayer.create(getApplicationContext(), R.raw.beep_1);
                     mpWump.start();
-                } else {
-                    txtStatus.setText("FELICIDADES!\nCompletaste " + repetitions + " repeticiones");
+                } else if(!endWorkout2){
+                    txtStatus.setText("FELICIDADES!\nCompletaste " + repetitions + " repeticiones\n\n(Presione para volver al menu)");
                     mpClapping.start();
                     endWorkout2 = true;
+                }else{
+                    Intent myIntent = new Intent(this, MainActivity.class);
+                    startActivity(myIntent);
                 }
             }
         }

@@ -166,7 +166,31 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="10dp"
                 android:fontFamily="serif"
-                android:text="Definitivamente no. Debes siempre buscar ayuda profesional para ver qué ejercicios se adecúan más a tu terapia y siempre ten en cuenta tus limitaciones físicas. Sabemos que puedes lograrlo, pero la ayuda no está de más."
+                android:text="Definitivamente no. Debes siempre buscar ayuda profesional para ver qué ejercicios se adecúan más a tu terapia y siempre ten en cuenta tus limitaciones físicas. Sabemos que puedes lograrlo, pero la ayuda no está de más."/>
+
+            <TextView
+                android:id="@+id/txt_q7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_q5Answer"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="serif"
+                android:text="¿Qué comandos de voz puedo utilizar?"
+                android:textColor="#00BCD4"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_q7Answer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_q6"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="serif"
+                android:text="Puedes utilizar los comandos Inicio, Ejercicios, Progreso, Ayuda y Repeticiones. Utiliza solo uno a la vez para lograr el mejor resultado."
                 android:layout_marginBottom="60dp" />
         </LinearLayout>
 
