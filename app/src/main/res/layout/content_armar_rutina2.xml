@@ -15,8 +15,11 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
+        android:fontFamily="serif"
         android:text="Armar Rutina"
-        android:textSize="30sp" />
+        android:textColor="#FF5722"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"  />
 
     <TextView
         android:id="@+id/categoria_ejercicio"
@@ -25,7 +28,8 @@
         android:layout_below="@id/titulo_armar_rutina"
         android:layout_alignParentLeft="true"
         android:text="Categoria"
-        android:textSize="25sp" />
+        android:textSize="25sp"
+        android:fontFamily="serif"  />
     <Spinner
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -33,7 +37,8 @@
         android:layout_below="@id/titulo_armar_rutina"
         android:layout_alignParentRight="true"
         android:layout_toRightOf="@id/categoria_ejercicio"
-        android:layout_alignBottom="@id/categoria_ejercicio"></Spinner>
+        android:layout_alignBottom="@id/categoria_ejercicio"
+        android:fontFamily="serif" ></Spinner>
 
     <TextView
         android:id="@+id/txt_tag_ejericio_armar"
@@ -43,6 +48,7 @@
         android:layout_alignRight="@id/categoria_ejercicio"
         android:layout_alignParentLeft="true"
         android:text="Ejercicio"
+        android:fontFamily="serif"
         android:textSize="25sp" />
     <Spinner
         android:layout_width="wrap_content"
@@ -60,7 +66,8 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@id/txt_tag_ejericio_armar"
         android:textSize="25sp"
-        android:layout_alignRight="@+id/categoria_ejercicio"/>
+        android:layout_alignRight="@+id/categoria_ejercicio"
+        android:fontFamily="serif" />
     <Spinner
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -76,7 +83,9 @@
         android:layout_below="@id/txt_medicion_agregar_ejercicio"
         android:layout_centerHorizontal="true"
         android:text="Agregar Ejercicio"
-        android:textSize="24sp" />
+        android:textSize="20sp"
+        android:background="#00BCD4"
+        android:fontFamily="serif" />
     <ListView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

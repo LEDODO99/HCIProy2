@@ -4,20 +4,21 @@ import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-
-import static android.hardware.Sensor.TYPE_GYROSCOPE;
 
 public class EjercicioActivity extends AppCompatActivity implements SensorEventListener {
 
     private SensorManager mSensorManager;
     private Sensor mAccelerometer;
     //private Sensor mGyroscope;
+    private boolean workoutSetMode = false;
     private boolean workoutSetStart = false;
     private boolean workoutSetEnd = false;
     private int workoutEndCounter = 0;
@@ -30,7 +31,7 @@ public class EjercicioActivity extends AppCompatActivity implements SensorEventL
     private int previousShiftY = 0;
     private int previousShiftZ = 0;
 
-    private float sensibility = 4.0f;
+    private float sensibility = 3.0f;
 
     private ArrayList<Integer> workoutForcesX = new ArrayList<>();
     private ArrayList<Integer> workoutForcesY = new ArrayList<>();
@@ -43,8 +44,16 @@ public class EjercicioActivity extends AppCompatActivity implements SensorEventL
     private long timeCooldown = 0;
 
     private TextView txtStatus;
-    private TextView txtRepetitionCounter;
     private int repetitions = 0;
+
+    private boolean endWorkout1 = false;
+    private boolean endWorkout2 = false;
+
+
+    private MediaPlayer mpPling;
+    private MediaPlayer mpWump;
+    private MediaPlayer mpRobots;
+    private MediaPlayer mpClapping;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,7 +64,11 @@ public class EjercicioActivity extends AppCompatActivity implements SensorEventL
         //mGyroscope = mSensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE);
 
         txtStatus = findViewById(R.id.textView4);
-        txtRepetitionCounter = findViewById(R.id.textView3);
+
+        mpPling = MediaPlayer.create(getApplicationContext(), R.raw.pling_1);
+        mpWump = MediaPlayer.create(getApplicationContext(), R.raw.wump_1);
+        mpRobots = MediaPlayer.create(getApplicationContext(), R.raw.robots_1);
+        mpClapping = MediaPlayer.create(getApplicationContext(), R.raw.clapping_1);
     }
 
     protected void onResume() {
@@ -75,7 +88,7 @@ public class EjercicioActivity extends AppCompatActivity implements SensorEventL
         //Log.i("Sensor",sensorName + ": X: " + sensorEvent.values[0] + "; Y: " + sensorEvent.values[1] + "; Z: " + sensorEvent.values[2] + ";");
 
 
-        if(workoutForcesX.isEmpty() && workoutForcesY.isEmpty() && workoutForcesZ.isEmpty()) {
+        if(workoutSetMode) {
 
             if(previousX == 0){
                 previousX = sensorEvent.values[0];
@@ -96,7 +109,7 @@ public class EjercicioActivity extends AppCompatActivity implements SensorEventL
             {
                 workoutSetStart = true;
                 Log.i("WORKOUT", "STARTING WORKOUT");
-                txtStatus.setText("Grabando ejercicio");
+                txtStatus.setText("Calibrando");
                 timeCooldown = System.currentTimeMillis();
             }
         }
@@ -166,11 +179,24 @@ public class EjercicioActivity extends AppCompatActivity implements SensorEventL
                 timeCooldown = System.currentTimeMillis();
             }
             if(System.currentTimeMillis() - timeCooldown > 1000){
+                workoutSetMode = false;
                 workoutSetEnd = true;
-                txtStatus.setText("Ejercicio Guardado");
+                txtStatus.setText("Calibración completada\nPuede empezar su ejercicio");
+                mpRobots.start();
                 Log.i("RESULTS X", workoutForcesX.toString());
                 Log.i("RESULTS Y", workoutForcesY.toString());
                 Log.i("RESULTS Z", workoutForcesZ.toString());
+
+                if(currentWorkoutForcesX.size()%2 != 0){
+                    currentWorkoutForcesX.remove(currentWorkoutForcesX.size()-1);
+                }
+                if(currentWorkoutForcesY.size()%2 != 0){
+                    currentWorkoutForcesY.remove(currentWorkoutForcesY.size()-1);
+                }
+                if(currentWorkoutForcesZ.size()%2 != 0){
+                    currentWorkoutForcesZ.remove(currentWorkoutForcesZ.size()-1);
+                }
+
                 currentWorkoutForcesX = new ArrayList<>(workoutForcesX);
                 currentWorkoutForcesY = new ArrayList<>(workoutForcesY);
                 currentWorkoutForcesZ = new ArrayList<>(workoutForcesZ);
@@ -179,7 +205,7 @@ public class EjercicioActivity extends AppCompatActivity implements SensorEventL
             }
         }
 
-        if(workoutSetEnd){
+        if(workoutSetEnd && !endWorkout2){
             if(previousShiftX == 1 && sensorEvent.values[0] > previousX){
                 previousX = sensorEvent.values[0];
             }else if(previousShiftX == -1 && sensorEvent.values[0] < previousX) {
@@ -241,10 +267,15 @@ public class EjercicioActivity extends AppCompatActivity implements SensorEventL
                 previousShiftZ = 1;
             }
 
-            if(currentWorkoutForcesX.isEmpty() && currentWorkoutForcesY.isEmpty() && currentWorkoutForcesZ.isEmpty()){
+            if((currentWorkoutForcesX.isEmpty() && !workoutForcesX.isEmpty()) || (currentWorkoutForcesY.isEmpty() && !workoutForcesY.isEmpty()) || (currentWorkoutForcesZ.isEmpty()) && !workoutForcesZ.isEmpty()){
                 Log.i("REPETICIONES", "REPETICION COMPLETADA");
+
+                mpPling.release();
+                mpPling = MediaPlayer.create(getApplicationContext(), R.raw.pling_1);
+                mpPling.start();
                 repetitions++;
-                txtRepetitionCounter.setText(""+repetitions);
+                endWorkout1 = false;
+                txtStatus.setText("Repeticiones\n"+repetitions);
                 currentWorkoutForcesX = new ArrayList<>(workoutForcesX);
                 currentWorkoutForcesY = new ArrayList<>(workoutForcesY);
                 currentWorkoutForcesZ = new ArrayList<>(workoutForcesZ);
@@ -255,5 +286,29 @@ public class EjercicioActivity extends AppCompatActivity implements SensorEventL
     @Override
     public void onAccuracyChanged(Sensor sensor, int i) {
 
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        if(event.getAction() == MotionEvent.ACTION_UP) {
+            if (!workoutSetStart) {
+                workoutSetMode = true;
+                txtStatus.setText("Realize una repeticion y luego mantenga quieto el celular");
+                mpWump.start();
+            } else if (workoutSetEnd) {
+                if (!endWorkout1) {
+                    txtStatus.setText("Toque otra vez la pantalla para finalizar");
+                    endWorkout1 = true;
+                    mpWump.release();
+                    mpWump = MediaPlayer.create(getApplicationContext(), R.raw.beep_1);
+                    mpWump.start();
+                } else {
+                    txtStatus.setText("FELICIDADES!\nCompletaste " + repetitions + " repeticiones");
+                    mpClapping.start();
+                    endWorkout2 = true;
+                }
+            }
+        }
+        return false;
     }
 }

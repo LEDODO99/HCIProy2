@@ -11,7 +11,8 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:text="Text View"
-        android:textSize="30dp"/>
+        android:textSize="30dp"
+        android:fontFamily="serif" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -20,7 +21,8 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/custom_nombre_ejercicio"
         android:textSize="25dp"
-        android:text="Text VIew"/>
+        android:text="Text VIew"
+        android:fontFamily="serif" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -29,7 +31,8 @@
         android:layout_toRightOf="@id/custom_medidor_set"
         android:layout_alignTop="@+id/custom_medidor_set"
         android:textSize="25dp"
-        android:text="Text VIew"/>
+        android:text="Text VIew"
+        android:fontFamily="serif" />
 
     <ImageView
         android:id="@+id/iv_estado"

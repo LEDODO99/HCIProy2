@@ -26,6 +26,24 @@
                 android:textSize="30sp"
                 android:textStyle="bold|italic" />
 
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/inicio" />
+
+            <TextView
+                android:id="@+id/txt_inicio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_q5"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="25dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="serif"
+                android:textSize="30sp"
+                android:justificationMode="inter_word"
+                android:text="Bienvenido a SHAKEBUDDY, la aplicación que te ayudará a mantenerte ejercitado sin importar tu condición. Puedes escoger entre varios ejercicios, armar tus rutinas y llevar registro de tu progreso." />
 
         </LinearLayout>
 
