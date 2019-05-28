@@ -144,8 +144,8 @@ public class MainActivity extends AppCompatActivity
         }else if(voiceCommand.toLowerCase().contains("ayuda")){
             snackbarMessage = "Redireccionando a Ayuda.";
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new AyudaFragment()).commit();
-        }else if(voiceCommand.toLowerCase().contains("secretos")){
-            snackbarMessage = "Redireccionando a Secretos.";
+        }else if(voiceCommand.toLowerCase().contains("Repeticiones")){
+            snackbarMessage = "Redireccionando a Repeticiones.";
             Intent myIntent = new Intent(this, EjercicioActivity.class);
             startActivity(myIntent);
         }
