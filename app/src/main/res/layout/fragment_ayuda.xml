@@ -190,7 +190,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="10dp"
                 android:fontFamily="serif"
-                android:text="Puedes utilizar los comandos Inicio, Ejercicios, Progreso, Ayuda y Repeticiones. Utiliza solo uno a la vez para lograr el mejor resultado."
+                android:text="Puedes utilizar los comandos Inicio, Repeticiones, Rutinas, Progreso, Videos y Ayuda. Utiliza solo uno a la vez para lograr el mejor resultado."
                 android:layout_marginBottom="60dp" />
         </LinearLayout>
 

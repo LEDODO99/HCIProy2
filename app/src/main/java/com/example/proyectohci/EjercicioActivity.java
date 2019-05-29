@@ -308,8 +308,7 @@ public class EjercicioActivity extends AppCompatActivity implements SensorEventL
                     mpClapping.start();
                     endWorkout2 = true;
                 }else{
-                    Intent myIntent = new Intent(this, MainActivity.class);
-                    startActivity(myIntent);
+                    onBackPressed();
                 }
             }
         }

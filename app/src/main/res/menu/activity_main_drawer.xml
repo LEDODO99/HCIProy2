@@ -9,15 +9,23 @@
             android:icon="@drawable/ic_menu_inicio"
             android:title="@string/menu_inicio" />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/nav_repeticiones"
             android:icon="@drawable/ic_menu_ejercicios"
-            android:title="@string/menu_ejercicio" />
+            android:title="Repeticiones" />
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/nav_rutinas"
+            android:icon="@drawable/ic_timer_black_24dp"
+            android:title="Rutinas" />
+        <item
+            android:id="@+id/nav_progreso"
             android:icon="@drawable/ic_menu_progreso"
             android:title="@string/menu_progreso" />
         <item
-            android:id="@+id/nav_tools"
+            android:id="@+id/nav_videos"
+            android:icon="@drawable/ic_videos"
+            android:title="Videos" />
+        <item
+            android:id="@+id/nav_ayuda"
             android:icon="@drawable/ic_menu_ayuda"
             android:title="@string/menu_ayuda" />
     </group>

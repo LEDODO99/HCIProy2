@@ -26,15 +26,7 @@ public class EjerciciosFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         final LayoutInflater inf = inflater;
         View view = inflater.inflate(R.layout.fragment_ejecicios, container, false);
-        Button btnRutina=(Button) view.findViewById(R.id.boton_armar_rutina);
-        btnRutina.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent in= new Intent(getActivity(),ArmarRutina.class);
-                startActivity(in);
-            }
-        });
-
+        
         ImageButton btnSquats=(ImageButton) view.findViewById(R.id.imageButtonSquats);
         btnSquats.setOnClickListener(new View.OnClickListener() {
             @Override

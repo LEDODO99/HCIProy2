@@ -26,6 +26,12 @@ public class MainActivity extends AppCompatActivity
 
     private static final int REQ_CODE_SPEECH_INPUT = 100;
 
+    private InicioFragment inicioFragment;
+    private EjerciciosFragment ejerciciosFragment;
+    private ProgresoFragment progresoFragment;
+    private AyudaFragment ayudaFragment;
+    private RutinasFragment rutinasFragment;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,7 +55,13 @@ public class MainActivity extends AppCompatActivity
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new InicioFragment()).commit();
+        inicioFragment = new InicioFragment();
+        ejerciciosFragment = new EjerciciosFragment();
+        progresoFragment = new ProgresoFragment();
+        ayudaFragment = new AyudaFragment();
+        rutinasFragment = new RutinasFragment();
+
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, inicioFragment).commit();
     }
 
     private void startVoiceInput() {
@@ -100,12 +112,17 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_home) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new InicioFragment()).commit();
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.nav_videos) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new EjerciciosFragment()).commit();
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_progreso) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ProgresoFragment()).commit();
-        } else if (id == R.id.nav_tools) {
+        } else if (id == R.id.nav_ayuda) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new AyudaFragment()).commit();
+        } else if (id == R.id.nav_repeticiones) {
+            Intent in= new Intent(this,EjercicioActivity.class);
+            startActivity(in);
+        } else if (id == R.id.nav_rutinas) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new RutinasFragment()).commit();
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
@@ -136,22 +153,26 @@ public class MainActivity extends AppCompatActivity
 
         if(voiceCommand.toLowerCase().contains("inicio")){
             snackbarMessage = "Redireccionando a Inicio.";
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new InicioFragment()).commit();
-        }else if(voiceCommand.toLowerCase().contains("ejercicios")){
-            snackbarMessage = "Redireccionando a Ejercicios.";
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new EjerciciosFragment()).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, inicioFragment).commit();
+        }else if(voiceCommand.toLowerCase().contains("videos")){
+            snackbarMessage = "Redireccionando a Videos.";
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, ejerciciosFragment).commit();
         }else if(voiceCommand.toLowerCase().contains("progreso")){
             snackbarMessage = "Redireccionando a Progreso.";
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ProgresoFragment()).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, progresoFragment).commit();
         }else if(voiceCommand.toLowerCase().contains("ayuda")){
             snackbarMessage = "Redireccionando a Ayuda.";
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new AyudaFragment()).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, ayudaFragment).commit();
+        }else if(voiceCommand.toLowerCase().contains("rutinas")){
+            snackbarMessage = "Redireccionando a Rutinas.";
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, rutinasFragment).commit();
         }else if(voiceCommand.toLowerCase().contains("repeticiones")){
             snackbarMessage = "Redireccionando a Repeticiones.";
             Intent myIntent = new Intent(getApplicationContext(), EjercicioActivity.class);
             startActivity(myIntent);
+        }else{
+            snackbarMessage = "Comando de voz no indentificado.";
         }
-
 
 
         Snackbar.make(getWindow().getDecorView().getRootView(), snackbarMessage, Snackbar.LENGTH_LONG).setAction("Action", null).show();

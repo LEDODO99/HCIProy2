@@ -20,7 +20,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="25dp"
                 android:fontFamily="serif"
-                android:text="Ejercicios"
+                android:text="Videos"
                 android:textColor="#FF5722"
                 android:textSize="30sp"
                 android:textStyle="bold|italic" />
@@ -56,20 +56,6 @@
                 android:layout_below="@id/imageButtonBiceps"
                 android:layout_marginTop="-10dp"
                 app:srcCompat="@drawable/lunges" />
-
-            <Button
-                android:id="@+id/boton_armar_rutina"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/imageButtonLunges"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="25dp"
-                android:layout_marginBottom="25dp"
-                android:background="#00BCD4"
-                android:fontFamily="serif"
-                android:text="Armar Rutina"
-                android:textColor="#F8F8F8"
-                android:textStyle="bold" />
 
         </LinearLayout>
 
